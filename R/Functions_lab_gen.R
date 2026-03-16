@@ -418,8 +418,6 @@ create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height
 #' 
 #' @return A **Shiny application** object.
 #'
-#' @family **Standalone Application**
-#' 
 #' @importFrom shiny runApp
 #'
 #' @export

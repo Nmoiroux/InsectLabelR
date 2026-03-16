@@ -15,4 +15,3 @@ to use InsectLabelR with either example datasets included in the package
 or user-provided data. It provides a graphical interface for generating
 labels without requiring programming expertise.
 }
-\concept{\strong{Standalone Application}}

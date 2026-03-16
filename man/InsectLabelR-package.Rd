@@ -4,9 +4,9 @@
 \name{InsectLabelR-package}
 \alias{InsectLabelR}
 \alias{InsectLabelR-package}
-\title{InsectLabelR: Create Labels for Insect In Collection}
+\title{InsectLabelR: Create Labels for Insect in Collection}
 \description{
-Streamlines the creation of high-quality labels for insect pinning. By taking a dataset as input, EtiquetteR generates printable labels in Latex and PDF format, helping researchers and entomologists maintain accurate and standardized specimen records. Requires a compatible installation of 'pdflatex' (e.g. \url{https://www.tug.org/texlive}). For enhanced accessibility, the package includes a user-friendly Shiny application (accessible online \url{https://nicolas-moiroux.shinyapps.io/InsectLabelR/}), which provides a graphical interface for generating labels without requiring programming expertise.
+Streamlines the creation of high-quality labels for insect pinning. By taking a dataset as input, the package allow to generate printable labels in Latex and PDF format, helping researchers and entomologists maintain accurate and standardized specimen records. Requires a compatible installation of 'pdflatex' (e.g. \url{https://www.tug.org/texlive/}). For enhanced accessibility, the package includes a user-friendly Shiny application (accessible online \url{https://nicolas-moiroux.shinyapps.io/InsectLabelR/}), which provides a graphical interface for generating labels without requiring programming expertise.
 }
 \author{
 \strong{Maintainer}: Nicolas Moiroux \email{nicolas.moiroux@ird.fr} (\href{https://orcid.org/0000-0001-6755-6167}{ORCID})

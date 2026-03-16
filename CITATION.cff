@@ -13,7 +13,7 @@ authors:
     orcid: 'https://orcid.org/0000-0003-4067-6438'
 identifiers:
   - type: doi
-    value: https://doi.org/10.5281/zenodo.14987479
+    value: 10.5281/zenodo.14987479
 repository-code: 'https://github.com/Nmoiroux/InsectLabelR'
 version: 1.0.2
 date-released: '2026-02-13'
