@@ -31,7 +31,7 @@ and intended for pinning and label printing with \code{create_pdf()}.
 }
 \details{
 The dataset follows the standard input structure expected by
-\pkg{EtiquetteR}, with one row per specimen (or per group of identical
+\pkg{InsectLabelR}, with one row per specimen (or per group of identical
 specimens when \code{N > 1}). It includes collection metadata,
 taxonomic identification, sex, geographic coordinates (in DMS format),
 and a unique specimen identifier.
@@ -41,15 +41,4 @@ generation without requiring external files.
 
 The dataset contains specimens of \emph{Culiseta (Cal.) longiareolata}
 and \emph{Culex pipiens}.
-}
-\examples{
-data(mosquito_collection)
-head(mosquito_collection)
-
-# Example: generate labels directly from the dataset
-# create_pdf(
-#   data = mosquito_example,
-#   file_output = "mosquito_labels.pdf"
-# )
-
 }

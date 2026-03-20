@@ -2,7 +2,7 @@
 % Please edit documentation in R/Functions_lab_gen.R
 \name{print_header}
 \alias{print_header}
-\title{Create LaTeX Header for Mosquito Labels Document}
+\title{Create 'LaTeX' Header for Mosquito Labels Document}
 \usage{
 print_header(
   file_out,
@@ -13,7 +13,7 @@ print_header(
 )
 }
 \arguments{
-\item{file_out}{A character string specifying the name of the output file to write the LaTeX header to.}
+\item{file_out}{A character string specifying the name of the output file to write the 'LaTeX' header to.}
 
 \item{lab_width}{An integer specifying the width (in mm) for the labels (default is 15 mm).}
 
@@ -21,22 +21,15 @@ print_header(
 
 \item{font_size}{A real (one digit) specifying the size of the font for the label (default is 4)}
 
-\item{n_col}{An integer specifying the number of columns in the LaTeX document (default is 8 columns).}
+\item{n_col}{An integer specifying the number of columns in the 'LaTeX' document (default is 8 columns).}
 }
 \description{
-This function generates a LaTeX document header for mosquito labels and writes it to the specified output file.
-The header includes various LaTeX packages, document settings, metadata, and the front cover of the document.
-The LaTeX code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
+This function generates a 'LaTeX' document header for mosquito labels and writes it to the specified output file.
+The header includes various 'LaTeX' packages, document settings, metadata, and the front cover of the document.
+The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
 and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
 }
 \details{
-This function is primarily used for creating labels in LaTeX for mosquito specimen identification. It sets the document's layout and font sizes,
+This function is primarily used for creating labels in 'LaTeX' for mosquito specimen identification. It sets the document's layout and font sizes,
 allowing customization of label size and number of columns on the page.
-}
-\examples{
-\dontrun{
-print_header("output.tex", lab_width = 20,lab_height = 10, font_size = 5, n_col = 7)
-}
-
-
 }

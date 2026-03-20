@@ -7,7 +7,7 @@
 \format{
 A data frame with 13 rows and 10 variables:
 \describe{
-\item{field_name}{Name of the field in the \verb{mosquito_collection data} table.}
+\item{field_name}{Name of the field in the `mosquito_collection' data table.}
 \item{print}{Logical (0/1). Whether the field is printed on labels.}
 \item{label_no}{Numeric. Label number on which the field is printed
 (e.g., 1 = identification label, 2 = locality/date label,
@@ -33,7 +33,7 @@ A toy parameter table defining how specimen data fields are arranged,
 formatted, and distributed across labels when using \code{create_pdf()}.
 }
 \details{
-This dataset illustrates the structure expected by \pkg{EtiquetteR} to
+This dataset illustrates the structure expected by \pkg{InsectLabelR} to
 control label composition (field selection, ordering, formatting options,
 line breaks, highlighting, and symbol printing).
 
@@ -49,16 +49,4 @@ This example configuration produces three labels per specimen:
 
 Taxonomic names are printed in italics, the subgenus is enclosed in
 parentheses, and sex can optionally be rendered as a biological symbol.
-}
-\examples{
-data(print_parameters)
-print(print_parameters)
-
-# Example usage with create_pdf():
-# create_pdf(
-#   data = mosquito_collection,
-#   print_parameters = print_parameters,
-#   file_output = "mosquito_labels.pdf"
-# )
-
 }

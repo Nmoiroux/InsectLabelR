@@ -1,20 +1,15 @@
-#' @title Convert Sex Data to LaTeX Format
+#' @title Convert Sex Data to 'LaTeX' Format
 #'
 #' @description
-#' This function converts a string representing sex data into the appropriate LaTeX code for displaying male or female symbols in small font.
+#' This function converts a string representing sex data into the appropriate 'LaTeX' code for displaying male or female symbols in small font.
 #'
 #' @param sex_data A character string representing the sex of an individual. It can start with "f" or "F" for female, "m" or "M" for male, or it can be \code{NA}.
 #'
-#' @return A character string containing the corresponding LaTeX code: \code{"\\smallfemale"} for female, \code{"\\smallmale"} for male, or \code{NA} if the input is not recognized or is \code{NA}.
+#' @return A character string containing the corresponding 'LaTeX' code: \code{"\\smallfemale"} for female, \code{"\\smallmale"} for male, or \code{NA} if the input is not recognized or is \code{NA}.
 #'
 #' @details
-#' The function checks the first letter of the input string. If it starts with "f" or "F", it returns the LaTeX code for the female symbol. If it starts with "m" or "M", it returns the LaTeX code for the male symbol. If the input is \code{NA} or unrecognized, the function returns \code{NA}.
+#' The function checks the first letter of the input string. If it starts with "f" or "F", it returns the 'LaTeX' code for the female symbol. If it starts with "m" or "M", it returns the 'LaTeX' code for the male symbol. If the input is \code{NA} or unrecognized, the function returns \code{NA}.
 #'
-#' @examples
-#' # Example usage:
-#' # sex_to_latex("female") # Returns "\\smallfemale"
-#' # sex_to_latex("male")   # Returns "\\smallmale"
-#' # sex_to_latex(NA)       # Returns NA
 #' 
 #' @importFrom stringr str_starts
 #'
@@ -36,30 +31,25 @@ sex_to_latex <- function(sex_data){
 }
 v_sex_to_latex <- Vectorize(sex_to_latex)
 
-#' @title Create LaTeX Header for Mosquito Labels Document
+#' @title Create 'LaTeX' Header for Mosquito Labels Document
 #'
 #' @description 
-#' This function generates a LaTeX document header for mosquito labels and writes it to the specified output file. 
-#' The header includes various LaTeX packages, document settings, metadata, and the front cover of the document. 
-#' The LaTeX code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
+#' This function generates a 'LaTeX' document header for mosquito labels and writes it to the specified output file. 
+#' The header includes various 'LaTeX' packages, document settings, metadata, and the front cover of the document. 
+#' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
 #' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
 #'
-#' @param file_out A character string specifying the name of the output file to write the LaTeX header to.
+#' @param file_out A character string specifying the name of the output file to write the 'LaTeX' header to.
 #' @param lab_width An integer specifying the width (in mm) for the labels (default is 15 mm).
 #' @param lab_height An integer specifying the height (in mm) for the labels (default is 9).
 #' @param font_size A real (one digit) specifying the size of the font for the label (default is 4)
 
-#' @param n_col An integer specifying the number of columns in the LaTeX document (default is 8 columns).
+#' @param n_col An integer specifying the number of columns in the 'LaTeX' document (default is 8 columns).
 #'
 #' @details
-#' This function is primarily used for creating labels in LaTeX for mosquito specimen identification. It sets the document's layout and font sizes,
+#' This function is primarily used for creating labels in 'LaTeX' for mosquito specimen identification. It sets the document's layout and font sizes,
 #' allowing customization of label size and number of columns on the page.
 #' 
-#' @examples
-#' \dontrun{
-#' print_header("output.tex", lab_width = 20,lab_height = 10, font_size = 5, n_col = 7)
-#' }
-#'
 #' 
 print_header <- function(file_out, lab_width = 15,lab_height = 9, font_size = 4, n_col = 8){
 	# create an empty Latex output file
@@ -175,16 +165,17 @@ print_header <- function(file_out, lab_width = 15,lab_height = 9, font_size = 4,
 "), 
 			file = file_out)}
 
-#' Print LaTeX Labels for Each Line of a Data Table
+#' @title Print 'LaTeX' Labels for Each Line of a Data Table
 #'
-#' This function prints LaTeX labels for each line of a data table based on specified information 
+#' @description
+#' This function prints 'LaTeX' labels for each line of a data table based on specified information 
 #' and user-defined printing parameters. It formats each label according to the provided 
-#' field names, data, and formatting options. The function generates LaTeX code for printing 
-#' the labels into an external file. The latex code is based on the work 
+#' field names, data, and formatting options. The function generates 'LaTeX' code for printing 
+#' the labels into an external file. The 'LaTeX' code is based on the work 
 #' by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex and 
 #' http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html )
 #'
-#' @param file_out A character string specifying the path to the output file where LaTeX code will be appended.
+#' @param file_out A character string specifying the path to the output file where 'LaTeX' code will be appended.
 #' @param ind_list A data frame containing the data for individuals. Each row corresponds to a specific individual.
 #' @param print_info A data frame specifying the printing parameters, including which fields to print, formatting options, and field names.
 #' @param line_n An integer indicating the row number in \code{ind_list} for which the labels should be created.
@@ -192,16 +183,13 @@ print_header <- function(file_out, lab_width = 15,lab_height = 9, font_size = 4,
 #' @param hl_col A character string specifying the color to be used for text highlighting
 #'
 #' @details The function retrieves data from a specified row in \code{ind_list} and matches it with the corresponding print parameters
-#' in \code{print_info}. It formats each label using the LaTeX code according to the user-defined options in \code{print_info}, 
+#' in \code{print_info}. It formats each label using the 'LaTeX' code according to the user-defined options in \code{print_info}, 
 #' such as whether to italicize or bracket certain fields, and whether to include field names before the information. 
-#' The function generates LaTeX code for individual labels and appends it to the specified output file.
+#' The function generates 'LaTeX' code for individual labels and appends it to the specified output file.
 #'
-#' @return The function appends LaTeX code to the file specified in \code{file_out}.
+#' @return The function appends 'LaTeX' code to the file specified in \code{file_out}.
 #' It does not return anything in R.
 #'
-#' @examples
-#' # Example usage:
-#' # print_line("output.tex", ind_list, print_info, line_n = 1)
 #' @importFrom dplyr arrange mutate if_else filter select group_by summarise
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_c
@@ -276,24 +264,22 @@ print_line <- function(file_out, ind_list, print_info, line_n, col_N_name = NA, 
 	file = file_out, append = TRUE)
 }
 
-#' Append the Closing Section to a LaTeX Document
+#' @title Append the Closing Section to a 'LaTeX' Document
 #'
-#' This function writes the closing commands to a LaTeX document. Specifically, 
+#' @description 
+#' This function writes the closing commands to a 'LaTeX' document. Specifically, 
 #' it appends the end of a `multicols*` environment and the `document` environment.
 #'
 #' @param file_out A character string specifying the path to the output file where 
-#' the LaTeX closing commands will be appended.
+#' the 'LaTeX' closing commands will be appended.
 #'
-#' @details The function appends LaTeX commands for ending a multiple-column layout 
+#' @details The function appends 'LaTeX' commands for ending a multiple-column layout 
 #' (using the `multicols*` environment) and the document. It ensures the proper 
-#' closure of a LaTeX document that was generated by the preceding steps.
+#' closure of a 'LaTeX' document that was generated by the preceding steps.
 #'
-#' @return This function appends LaTeX code to the file specified in \code{file_out}. 
+#' @return This function appends 'LaTeX' code to the file specified in \code{file_out}. 
 #' It does not return any output in R.
 #'
-#' @examples
-#' # Example usage:
-#' # print_bottom("output.tex")
 #'
 print_bottom <- function(file_out){
 	# write bottom of the latex file
@@ -303,16 +289,16 @@ print_bottom <- function(file_out){
 "), 
 			file = file_out, append = TRUE)}
 
-#' @title Generate a Complete LaTeX Document and Compile it into a PDF
+#' @title Generate a Complete 'LaTeX' Document and Compile it into a PDF
 #'
 #' @description
-#' This function generates a LaTeX document by sequentially adding a header, printing 
-#' labels for each raw of a data table, appending a footer, and then compiling the LaTeX code 
+#' This function generates a 'LaTeX' document by sequentially adding a header, printing 
+#' labels for each raw of a data table, appending a footer, and then compiling the 'LaTeX' code 
 #' into a PDF document.
-#' The LaTeX code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
+#' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
 #' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
 #'
-#' @param file_out A character string specifying the name of returned LaTeX and PDF files.
+#' @param file_out A character string specifying the name of returned 'LaTeX' and PDF files.
 #' @param ind_list A data frame containing individual data. Each row represents data 
 #' for one individual to be printed in the document.
 #' @param print_info A data frame specifying the parameters for printing, including field names, 
@@ -320,39 +306,33 @@ print_bottom <- function(file_out){
 #' @param lab_width An integer specifying the width (in mm) for the labels (default is 15 mm).
 #' @param lab_height An integer specifying the height (in mm) for the labels (default is 9).
 #' @param font_size A real (one digit) specifying the size of the font for the label (default is 4)
-#' @param n_col An integer specifying the number of label columns in the LaTeX document (default is 8 columns).
+#' @param n_col An integer specifying the number of label columns in the 'LaTeX' document (default is 8 columns).
 #' @param col_N_name A character string specifying the column name to be used for labels duplication (default is NA).
 #' @param hl_col A character string specifying the highlight color for specific elements (default is "orange").
 #'
 #' @details 
-#' This function first calls \code{print_header} to write the beginning of the LaTeX 
+#' This function first calls \code{print_header} to write the beginning of the 'LaTeX' 
 #' document. Then, it iterates over each row of \code{ind_list}, calling \code{print_line} 
 #' to generate labels according to the provided \code{print_info}. After all labels are printed, 
-#' it appends the LaTeX document footer using \code{print_bottom}. Finally, it compiles the 
-#' LaTeX document into a PDF using \code{pdflatex}.
+#' it appends the 'LaTeX' document footer using \code{print_bottom}. Finally, it compiles the 
+#' 'LaTeX' document into a PDF using \code{pdflatex}.
 #'
 #' @return 
-#' The function creates a LaTeX file, compiles it into a PDF, and saves the outputs 
+#' The function creates a 'LaTeX' file, compiles it into a PDF, and saves the outputs 
 #' to the specified location. It does not return any value in R.
 #'
 #' @examples
+#' \dontrun{
+#' create_pdf(
+#'   file_out = "output.pdf",
+#'   ind_list = mosquito_collection ,
+#'   print_info = print_parameters,
+#'   )
+#' }
 #' 
-#' # create_pdf(
-#' #  file_out = "output.pdf",         # Name of pdf file
-#' #  ind_list = mosquito_collection , # Table of data
-#' #  print_info = print_parameters,   # Table of printing parameter
-#' #  lab_width = 15,                # Width of the labels in mm
-#' #  lab_height = 9,                # Height of the labels in mm
-#' #  font_size = 4,                 # Font size
-#' #  n_col = 8,                     # Number of label per row on page
-#' #  col_N_name = "N", # Column with Number of specimens sharing identical metadata.
-#' #  hl_col = "orange"              # Color for highlighted text
-#' #  )
-#'   
 #' @importFrom stringr str_sub
 #' @importFrom tools file_ext
 #' @export
-
 create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height = 9, font_size = 4, n_col = 8, col_N_name = NA, hl_col = "orange"){
   
   # function that check extension of file_out and change to .tex if it is .pdf
@@ -409,14 +389,15 @@ create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height
 	}
 }
 
-#' Launch the InsectLabelR Shiny application
+#' @title Launch the InsectLabelR 'shiny' application
 #'
-#' This function launches an interactive Shiny application allowing users
+#' @description
+#' This function launches an interactive 'shiny' application allowing users
 #' to use InsectLabelR with either example datasets included in the package
 #' or user-provided data. It provides a graphical interface for generating 
 #' labels without requiring programming expertise. 
 #' 
-#' @return A **Shiny application** object.
+#' @return A **'shiny' application** object.
 #'
 #' @importFrom shiny runApp
 #'

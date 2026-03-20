@@ -2,7 +2,7 @@
 % Please edit documentation in R/Functions_lab_gen.R
 \name{sex_to_latex}
 \alias{sex_to_latex}
-\title{Convert Sex Data to LaTeX Format}
+\title{Convert Sex Data to 'LaTeX' Format}
 \usage{
 sex_to_latex(sex_data)
 }
@@ -10,18 +10,11 @@ sex_to_latex(sex_data)
 \item{sex_data}{A character string representing the sex of an individual. It can start with "f" or "F" for female, "m" or "M" for male, or it can be \code{NA}.}
 }
 \value{
-A character string containing the corresponding LaTeX code: \code{"\\smallfemale"} for female, \code{"\\smallmale"} for male, or \code{NA} if the input is not recognized or is \code{NA}.
+A character string containing the corresponding 'LaTeX' code: \code{"\\smallfemale"} for female, \code{"\\smallmale"} for male, or \code{NA} if the input is not recognized or is \code{NA}.
 }
 \description{
-This function converts a string representing sex data into the appropriate LaTeX code for displaying male or female symbols in small font.
+This function converts a string representing sex data into the appropriate 'LaTeX' code for displaying male or female symbols in small font.
 }
 \details{
-The function checks the first letter of the input string. If it starts with "f" or "F", it returns the LaTeX code for the female symbol. If it starts with "m" or "M", it returns the LaTeX code for the male symbol. If the input is \code{NA} or unrecognized, the function returns \code{NA}.
-}
-\examples{
-# Example usage:
-# sex_to_latex("female") # Returns "\\smallfemale"
-# sex_to_latex("male")   # Returns "\\smallmale"
-# sex_to_latex(NA)       # Returns NA
-
+The function checks the first letter of the input string. If it starts with "f" or "F", it returns the 'LaTeX' code for the female symbol. If it starts with "m" or "M", it returns the 'LaTeX' code for the male symbol. If the input is \code{NA} or unrecognized, the function returns \code{NA}.
 }

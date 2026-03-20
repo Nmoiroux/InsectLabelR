@@ -2,15 +2,15 @@
 % Please edit documentation in R/Functions_lab_gen.R
 \name{InsectLabelR_App}
 \alias{InsectLabelR_App}
-\title{Launch the InsectLabelR Shiny application}
+\title{Launch the InsectLabelR 'shiny' application}
 \usage{
 InsectLabelR_App()
 }
 \value{
-A \strong{Shiny application} object.
+A \strong{'shiny' application} object.
 }
 \description{
-This function launches an interactive Shiny application allowing users
+This function launches an interactive 'shiny' application allowing users
 to use InsectLabelR with either example datasets included in the package
 or user-provided data. It provides a graphical interface for generating
 labels without requiring programming expertise.

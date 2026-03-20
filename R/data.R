@@ -4,7 +4,7 @@
 #' and intended for pinning and label printing with \code{create_pdf()}.
 #'
 #' The dataset follows the standard input structure expected by
-#' \pkg{EtiquetteR}, with one row per specimen (or per group of identical
+#' \pkg{InsectLabelR}, with one row per specimen (or per group of identical
 #' specimens when \code{N > 1}). It includes collection metadata,
 #' taxonomic identification, sex, geographic coordinates (in DMS format),
 #' and a unique specimen identifier.
@@ -35,15 +35,6 @@
 #'
 #' @source Simulated dataset for demonstration purposes.
 #'
-#' @examples
-#' data(mosquito_collection)
-#' head(mosquito_collection)
-#'
-#' # Example: generate labels directly from the dataset
-#' # create_pdf(
-#' #   data = mosquito_example,
-#' #   file_output = "mosquito_labels.pdf"
-#' # )
 #'
 #' @name mosquito_collection
 #' @docType data
@@ -55,7 +46,7 @@ NULL
 #' A toy parameter table defining how specimen data fields are arranged,
 #' formatted, and distributed across labels when using \code{create_pdf()}.
 #'
-#' This dataset illustrates the structure expected by \pkg{EtiquetteR} to
+#' This dataset illustrates the structure expected by \pkg{InsectLabelR} to
 #' control label composition (field selection, ordering, formatting options,
 #' line breaks, highlighting, and symbol printing).
 #'
@@ -64,7 +55,7 @@ NULL
 #'
 #' @format A data frame with 13 rows and 10 variables:
 #' \describe{
-#'   \item{field_name}{Name of the field in the `mosquito_collection data` table.}
+#'   \item{field_name}{Name of the field in the `mosquito_collection' data table.}
 #'   \item{print}{Logical (0/1). Whether the field is printed on labels.}
 #'   \item{label_no}{Numeric. Label number on which the field is printed
 #'     (e.g., 1 = identification label, 2 = locality/date label,
@@ -95,16 +86,6 @@ NULL
 #'
 #' @source Simulated parameter table for demonstration purposes.
 #'
-#' @examples
-#' data(print_parameters)
-#' print(print_parameters)
-#'
-#' # Example usage with create_pdf():
-#' # create_pdf(
-#' #   data = mosquito_collection,
-#' #   print_parameters = print_parameters,
-#' #   file_output = "mosquito_labels.pdf"
-#' # )
 #'
 #' @name print_parameters
 #' @docType data

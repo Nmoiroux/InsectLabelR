@@ -2,7 +2,7 @@
 % Please edit documentation in R/Functions_lab_gen.R
 \name{print_line}
 \alias{print_line}
-\title{Print LaTeX Labels for Each Line of a Data Table}
+\title{Print 'LaTeX' Labels for Each Line of a Data Table}
 \usage{
 print_line(
   file_out,
@@ -14,7 +14,7 @@ print_line(
 )
 }
 \arguments{
-\item{file_out}{A character string specifying the path to the output file where LaTeX code will be appended.}
+\item{file_out}{A character string specifying the path to the output file where 'LaTeX' code will be appended.}
 
 \item{ind_list}{A data frame containing the data for individuals. Each row corresponds to a specific individual.}
 
@@ -27,24 +27,20 @@ print_line(
 \item{hl_col}{A character string specifying the color to be used for text highlighting}
 }
 \value{
-The function appends LaTeX code to the file specified in \code{file_out}.
+The function appends 'LaTeX' code to the file specified in \code{file_out}.
 It does not return anything in R.
 }
 \description{
-This function prints LaTeX labels for each line of a data table based on specified information
+This function prints 'LaTeX' labels for each line of a data table based on specified information
 and user-defined printing parameters. It formats each label according to the provided
-field names, data, and formatting options. The function generates LaTeX code for printing
-the labels into an external file. The latex code is based on the work
+field names, data, and formatting options. The function generates 'LaTeX' code for printing
+the labels into an external file. The 'LaTeX' code is based on the work
 by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex and
 http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html )
 }
 \details{
 The function retrieves data from a specified row in \code{ind_list} and matches it with the corresponding print parameters
-in \code{print_info}. It formats each label using the LaTeX code according to the user-defined options in \code{print_info},
+in \code{print_info}. It formats each label using the 'LaTeX' code according to the user-defined options in \code{print_info},
 such as whether to italicize or bracket certain fields, and whether to include field names before the information.
-The function generates LaTeX code for individual labels and appends it to the specified output file.
-}
-\examples{
-# Example usage:
-# print_line("output.tex", ind_list, print_info, line_n = 1)
+The function generates 'LaTeX' code for individual labels and appends it to the specified output file.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Functions_lab_gen.R
 \name{create_pdf}
 \alias{create_pdf}
-\title{Generate a Complete LaTeX Document and Compile it into a PDF}
+\title{Generate a Complete 'LaTeX' Document and Compile it into a PDF}
 \usage{
 create_pdf(
   file_out,
@@ -17,7 +17,7 @@ create_pdf(
 )
 }
 \arguments{
-\item{file_out}{A character string specifying the name of returned LaTeX and PDF files.}
+\item{file_out}{A character string specifying the name of returned 'LaTeX' and PDF files.}
 
 \item{ind_list}{A data frame containing individual data. Each row represents data
 for one individual to be printed in the document.}
@@ -31,42 +31,37 @@ formatting options, what data to print and, on how many labels.}
 
 \item{font_size}{A real (one digit) specifying the size of the font for the label (default is 4)}
 
-\item{n_col}{An integer specifying the number of label columns in the LaTeX document (default is 8 columns).}
+\item{n_col}{An integer specifying the number of label columns in the 'LaTeX' document (default is 8 columns).}
 
 \item{col_N_name}{A character string specifying the column name to be used for labels duplication (default is NA).}
 
 \item{hl_col}{A character string specifying the highlight color for specific elements (default is "orange").}
 }
 \value{
-The function creates a LaTeX file, compiles it into a PDF, and saves the outputs
+The function creates a 'LaTeX' file, compiles it into a PDF, and saves the outputs
 to the specified location. It does not return any value in R.
 }
 \description{
-This function generates a LaTeX document by sequentially adding a header, printing
-labels for each raw of a data table, appending a footer, and then compiling the LaTeX code
+This function generates a 'LaTeX' document by sequentially adding a header, printing
+labels for each raw of a data table, appending a footer, and then compiling the 'LaTeX' code
 into a PDF document.
-The LaTeX code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
+The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
 and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
 }
 \details{
-This function first calls \code{print_header} to write the beginning of the LaTeX
+This function first calls \code{print_header} to write the beginning of the 'LaTeX'
 document. Then, it iterates over each row of \code{ind_list}, calling \code{print_line}
 to generate labels according to the provided \code{print_info}. After all labels are printed,
-it appends the LaTeX document footer using \code{print_bottom}. Finally, it compiles the
-LaTeX document into a PDF using \code{pdflatex}.
+it appends the 'LaTeX' document footer using \code{print_bottom}. Finally, it compiles the
+'LaTeX' document into a PDF using \code{pdflatex}.
 }
 \examples{
+\dontrun{
+create_pdf(
+  file_out = "output.pdf",
+  ind_list = mosquito_collection ,
+  print_info = print_parameters,
+  )
+}
 
-# create_pdf(
-#  file_out = "output.pdf",         # Name of pdf file
-#  ind_list = mosquito_collection , # Table of data
-#  print_info = print_parameters,   # Table of printing parameter
-#  lab_width = 15,                # Width of the labels in mm
-#  lab_height = 9,                # Height of the labels in mm
-#  font_size = 4,                 # Font size
-#  n_col = 8,                     # Number of label per row on page
-#  col_N_name = "N", # Column with Number of specimens sharing identical metadata.
-#  hl_col = "orange"              # Color for highlighted text
-#  )
-  
 }
