@@ -4,5 +4,5 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^\.github$
-^inst/shiny/rsconnect$
 CITATION.cff
+^inst/shiny/rsconnect$
