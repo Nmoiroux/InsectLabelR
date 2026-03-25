@@ -14,6 +14,9 @@ This function launches an interactive 'shiny' application allowing users
 to use InsectLabelR with either example datasets included in the package
 or user-provided data. It provides a graphical interface for generating
 labels without requiring programming expertise.
+
+The application is available
+online at \url{https://nicolas-moiroux.shinyapps.io/InsectLabelR/}.
 }
 \examples{
 if(interactive()){

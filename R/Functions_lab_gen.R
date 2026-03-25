@@ -37,8 +37,8 @@ v_sex_to_latex <- Vectorize(sex_to_latex)
 #' @description 
 #' This function generates a 'LaTeX' document header for mosquito labels and writes it to the specified output file. 
 #' The header includes various 'LaTeX' packages, document settings, metadata, and the front cover of the document. 
-#' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
-#' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
+#' The 'LaTeX' code is adapted from work by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex} 
+#' and \url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html}).
 #'
 #' @param file_out A character string specifying the name of the output file to write the 'LaTeX' header to.
 #' @param lab_width An integer specifying the width (in mm) for the labels (default is 15 mm).
@@ -173,8 +173,8 @@ print_header <- function(file_out, lab_width = 15,lab_height = 9, font_size = 4,
 #' and user-defined printing parameters. It formats each label according to the provided 
 #' field names, data, and formatting options. The function generates 'LaTeX' code for printing 
 #' the labels into an external file. The 'LaTeX' code is based on the work 
-#' by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex and 
-#' http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html )
+#' by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex} and 
+#' \url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html})
 #'
 #' @param file_out A character string specifying the path to the output file where 'LaTeX' code will be appended.
 #' @param ind_list A data frame containing the data for individuals. Each row corresponds to a specific individual.
@@ -296,9 +296,9 @@ print_bottom <- function(file_out){
 #' This function generates a 'LaTeX' document by sequentially adding a header, printing 
 #' labels for each raw of a data table, appending a footer, and then compiling the 'LaTeX' code 
 #' into a PDF document.
-#' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
-#' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html ).
-#' Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/ ).
+#' The 'LaTeX' code is adapted from work by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex} 
+#' and \url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html}).
+#' Ensure you have a compatible installation of 'pdflatex' (see \url{https://www.latex-project.org/get/}).
 #'
 #' @param file_out A character string specifying the name of returned 'LaTeX' and PDF files.
 #' @param ind_list A data frame containing individual data. Each row represents data 
@@ -414,6 +414,9 @@ create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height
 #' to use InsectLabelR with either example datasets included in the package
 #' or user-provided data. It provides a graphical interface for generating 
 #' labels without requiring programming expertise. 
+#' 
+#' The application is available
+#' online at \url{https://nicolas-moiroux.shinyapps.io/InsectLabelR/}.
 #' 
 #' @return A **'shiny' application** object.
 #' 

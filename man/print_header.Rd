@@ -26,8 +26,8 @@ print_header(
 \description{
 This function generates a 'LaTeX' document header for mosquito labels and writes it to the specified output file.
 The header includes various 'LaTeX' packages, document settings, metadata, and the front cover of the document.
-The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
-and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
+The 'LaTeX' code is adapted from work by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex}
+and \url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html}).
 }
 \details{
 This function is primarily used for creating labels in 'LaTeX' for mosquito specimen identification. It sets the document's layout and font sizes,
