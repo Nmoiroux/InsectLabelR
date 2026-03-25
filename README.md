@@ -1,7 +1,6 @@
+## InsectLabelR: Generate Labels for Insect Pinning
 [![DOI](https://zenodo.org/badge/887177944.svg)](https://doi.org/10.5281/zenodo.14987479)
 [![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2FInsectLabelR&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/InsectLabelR)
-
-## InsectLabelR: Generate Labels for Insect Pinning
 
 ### Overview
 InsectLabelR is an R package designed to streamline the creation of high-quality labels for insect pinning. By taking a dataset as input, InsectLabelR generates printable labels in PDF format, helping researchers and entomologists maintain accurate and standardized specimen records.
