@@ -13,7 +13,8 @@ create_pdf(
   font_size = 4,
   n_col = 8,
   col_N_name = NA,
-  hl_col = "orange"
+  hl_col = "orange",
+  compile = TRUE
 )
 }
 \arguments{
@@ -36,6 +37,8 @@ formatting options, what data to print and, on how many labels.}
 \item{col_N_name}{A character string specifying the column name to be used for labels duplication (default is NA).}
 
 \item{hl_col}{A character string specifying the highlight color for specific elements (default is "orange").}
+
+\item{compile}{Boolean (TRUE/FALSE). Does the 'LaTeX' document should be compiled into a PDF document ? (default to TRUE)}
 }
 \value{
 The function creates a 'LaTeX' file, compiles it into a PDF, and saves the outputs
@@ -47,6 +50,7 @@ labels for each raw of a data table, appending a footer, and then compiling the 
 into a PDF document.
 The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex
 and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
+Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/).
 }
 \details{
 This function first calls \code{print_header} to write the beginning of the 'LaTeX'
@@ -56,12 +60,23 @@ it appends the 'LaTeX' document footer using \code{print_bottom}. Finally, it co
 'LaTeX' document into a PDF using \code{pdflatex}.
 }
 \examples{
-\dontrun{
-create_pdf(
-  file_out = "output.pdf",
-  ind_list = mosquito_collection ,
-  print_info = print_parameters,
-  )
-}
 
+outfile <- file.path(tempdir(), "labels.tex")
+
+# This example only generates the LaTeX file (no pdflatex required)
+create_pdf(
+  file_out = outfile,
+  ind_list = mosquito_collection,
+  print_info = print_parameters,
+  compile = FALSE
+)
+
+\dontrun{
+# Full PDF generation requires pdflatex installed
+create_pdf(
+  file_out = outfile,
+  ind_list = mosquito_collection,
+  print_info = print_parameters
+)
+}
 }

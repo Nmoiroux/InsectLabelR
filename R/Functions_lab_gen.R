@@ -29,6 +29,7 @@ sex_to_latex <- function(sex_data){
   }
   return(sex_return)
 }
+
 v_sex_to_latex <- Vectorize(sex_to_latex)
 
 #' @title Create 'LaTeX' Header for Mosquito Labels Document
@@ -297,6 +298,7 @@ print_bottom <- function(file_out){
 #' into a PDF document.
 #' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
 #' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
+#' Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/).
 #'
 #' @param file_out A character string specifying the name of returned 'LaTeX' and PDF files.
 #' @param ind_list A data frame containing individual data. Each row represents data 
@@ -309,6 +311,7 @@ print_bottom <- function(file_out){
 #' @param n_col An integer specifying the number of label columns in the 'LaTeX' document (default is 8 columns).
 #' @param col_N_name A character string specifying the column name to be used for labels duplication (default is NA).
 #' @param hl_col A character string specifying the highlight color for specific elements (default is "orange").
+#' @param compile Boolean (TRUE/FALSE). Does the 'LaTeX' document should be compiled into a PDF document ? (default to TRUE)
 #'
 #' @details 
 #' This function first calls \code{print_header} to write the beginning of the 'LaTeX' 
@@ -322,18 +325,29 @@ print_bottom <- function(file_out){
 #' to the specified location. It does not return any value in R.
 #'
 #' @examples
-#' \dontrun{
+#'
+#' outfile <- file.path(tempdir(), "labels.tex")
+#'
+#' # This example only generates the LaTeX file (no pdflatex required)
 #' create_pdf(
-#'   file_out = "output.pdf",
-#'   ind_list = mosquito_collection ,
+#'   file_out = outfile,
+#'   ind_list = mosquito_collection,
 #'   print_info = print_parameters,
-#'   )
+#'   compile = FALSE
+#' )
+#'
+#' \dontrun{
+#' # Full PDF generation requires pdflatex installed
+#' create_pdf(
+#'   file_out = outfile,
+#'   ind_list = mosquito_collection,
+#'   print_info = print_parameters
+#' )
 #' }
-#' 
 #' @importFrom stringr str_sub
 #' @importFrom tools file_ext
 #' @export
-create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height = 9, font_size = 4, n_col = 8, col_N_name = NA, hl_col = "orange"){
+create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height = 9, font_size = 4, n_col = 8, col_N_name = NA, hl_col = "orange", compile = TRUE){
   
   # function that check extension of file_out and change to .tex if it is .pdf
   file_out_ext <- file_ext(file_out)
@@ -377,16 +391,20 @@ create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height
 	print_bottom(file_out = file_out)
 	
 	# Step 4: Compile the LaTeX document into a PDF using pdflatex
-	compile_result <- system(sprintf("pdflatex -interaction=nonstopmode %s", file_out), intern = TRUE)
-	
-	# Step 5: Check if the PDF generation was successful
-	if (any(grepl("Output written on", compile_result))) {
-		message("PDF successfully generated.")
-	} else {
-		message("LaTeX compilation failed. Please ensure that pdflatex is installed and accessible in your PATH.")
-		# Print the error output from pdflatex
-		print(compile_result)
+	if (compile){
+	  
+	  compile_result <- system(sprintf("pdflatex -interaction=nonstopmode %s", file_out), intern = TRUE)
+	  
+	  # Step 5: Check if the PDF generation was successful
+	  if (any(grepl("Output written on", compile_result))) {
+	    message("PDF successfully generated.")
+	  } else {
+	    message("LaTeX compilation failed. Please ensure that pdflatex is installed.")
+	    # Print the error output from pdflatex
+	    print(compile_result)
+	  }
 	}
+
 }
 
 #' @title Launch the InsectLabelR 'shiny' application
@@ -398,6 +416,11 @@ create_pdf <- function(file_out, ind_list, print_info,lab_width = 15, lab_height
 #' labels without requiring programming expertise. 
 #' 
 #' @return A **'shiny' application** object.
+#' 
+#' @examples
+#' if(interactive()){
+#' InsectLabelR_App()
+#' }
 #'
 #' @importFrom shiny runApp
 #'
