@@ -50,7 +50,7 @@ labels for each raw of a data table, appending a footer, and then compiling the 
 into a PDF document.
 The 'LaTeX' code is adapted from work by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex}
 and \url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html}).
-Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/ ).
+Ensure you have a compatible installation of 'pdflatex' (see \url{https://www.latex-project.org/get/}).
 }
 \details{
 This function first calls \code{print_header} to write the beginning of the 'LaTeX'
