@@ -35,8 +35,8 @@ This function prints 'LaTeX' labels for each line of a data table based on speci
 and user-defined printing parameters. It formats each label according to the provided
 field names, data, and formatting options. The function generates 'LaTeX' code for printing
 the labels into an external file. The 'LaTeX' code is based on the work
-by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex and
-http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html )
+by Samuel Brown (see \url{https://github.com/sdjbrown/publicFiles/blob/master/labels.tex} and
+\url{http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html})
 }
 \details{
 The function retrieves data from a specified row in \code{ind_list} and matches it with the corresponding print parameters
