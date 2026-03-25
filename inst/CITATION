@@ -3,6 +3,6 @@ bibentry(
   title    = "InsectLabelR: Designing labels for insects in collection",
   author   = "Nicolas Moiroux and Nil Rahola",
   year     = "2026",
-  note     = "R package version 1.0.3",
+  note     = "R package version 1.0.4",
   doi      = "10.5281/zenodo.14987479"
 )

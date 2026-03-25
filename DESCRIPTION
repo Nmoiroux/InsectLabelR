@@ -1,6 +1,6 @@
 Package: InsectLabelR
 Title: Create Labels for Insect in Collection
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: 
     c(person(given = "Nicolas", 
            family = "Moiroux", 
