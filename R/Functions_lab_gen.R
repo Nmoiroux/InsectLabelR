@@ -297,8 +297,8 @@ print_bottom <- function(file_out){
 #' labels for each raw of a data table, appending a footer, and then compiling the 'LaTeX' code 
 #' into a PDF document.
 #' The 'LaTeX' code is adapted from work by Samuel Brown (see https://github.com/sdjbrown/publicFiles/blob/master/labels.tex 
-#' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html).
-#' Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/).
+#' and http://the-praise-of-insects.blogspot.com/2010/03/latex-insect-labels.html ).
+#' Ensure you have a compatible installation of 'pdflatex' (see https://www.latex-project.org/get/ ).
 #'
 #' @param file_out A character string specifying the name of returned 'LaTeX' and PDF files.
 #' @param ind_list A data frame containing individual data. Each row represents data 
