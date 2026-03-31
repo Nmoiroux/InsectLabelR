@@ -1,10 +1,10 @@
-## InsectLabelR: Generate Labels for Insect Pinning
+# InsectLabelR: Generate Labels for Insect Pinning
 [![DOI](https://zenodo.org/badge/887177944.svg)](https://doi.org/10.5281/zenodo.14987479)
 [![R-multiverse status](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.r-multiverse.org%2Fapi%2Fpackages%2FInsectLabelR&query=%24.Version&label=r-multiverse)](https://community.r-multiverse.org/InsectLabelR)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/InsectLabelR)](https://cran.r-project.org/package=InsectLabelR)
 [![](https://cranlogs.r-pkg.org/badges/InsectLabelR)](https://cran.r-project.org/package=InsectLabelR)
 
-### Overview
+## Overview
 InsectLabelR is an R package designed to streamline the creation of high-quality labels for insect pinning. By taking a dataset as input, InsectLabelR generates printable labels in PDF format, helping researchers and entomologists maintain accurate and standardized specimen records.
 
 For enhanced accessibility, the package includes a user-friendly [Shiny application](https://nicolas-moiroux.shinyapps.io/InsectLabelR/), which provides a graphical interface for generating labels without requiring programming expertise and detailed user guides in both English and French .
@@ -19,7 +19,7 @@ For enhanced accessibility, the package includes a user-friendly [Shiny applicat
 
 ---
 
-### Installation
+## Installation
 To install the InsectLabelR package, use the following command in R:
 ```R
 # Install from GitHub
@@ -28,8 +28,8 @@ devtools::install_github("Nmoiroux/InsectLabelR")
 
 ---
 
-### Usage
-#### Using the Shiny App:
+## Usage
+### Using the Shiny App
 The Shiny app provides an intuitive interface for generating insect pinning labels. You can access it online at [InsectLabelR](https://nicolas-moiroux.shinyapps.io/InsectLabelR/) or run it locally:
 ```R
 InsectLabelR_App()
@@ -50,7 +50,7 @@ InsectLabelR_App()
 
 ---
 
-### Input Format
+#### Input Format
 Your dataset must include:
 1. **Data Table**: A table with one row per insect and columns describing attributes (e.g., species, collection date).
    - Supported formats: `.csv` (tab-delimited), `.xlsx`, `.ods`.
@@ -64,7 +64,7 @@ Example data and parameter tables are provided in the [InsectLabelR repository](
 
 ---
 
-### Example Workflow
+#### Example Workflow
 1. Download the example dataset: [liste_ind_coll_ex.ods](https://github.com/Nmoiroux/InsectLabelR/blob/main/inst/extdata/liste_ind_coll_ex.ods).
 2. Upload the file and select the sheet "Table_data".
 3. Set printing parameters by selecting "Print_parameters_ex1" sheet or configure them manually.
