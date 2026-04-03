@@ -15,7 +15,7 @@ Vous aurez besoin d'un "tableau de données" contenant les informations à impri
 
 Formats de fichiers supportés : `.csv` (délimitaion: tabulations), `.xlsx`, `.ods`
 
-1. Cliquez sur le bouton 'Browse' et chargez le fichier contenant les données sur les insectes. Pour des tests ou pour voir des exemples de données, vous pouvez utiliser les jeux de données exemples du package `R` ETiquetteR (qui contient aussi des exemples de tables de paramètres d'impression, voir l'étape 2 ci-dessous) disponibles ici : [Données exemples ETiquetteR](https://github.com/Nmoiroux/EtiquetteR/blob/main/inst/extdata/). Ces exemples sont disponibles dans tous les formats de fichiers supportés.
+1. Cliquez sur le bouton 'Browse' et chargez le fichier contenant les données sur les insectes. Pour des tests ou pour voir des exemples de données, vous pouvez utiliser les jeux de données exemples du package `R` InsectLabelR (qui contient aussi des exemples de tables de paramètres d'impression, voir l'étape 2 ci-dessous) disponibles ici : [Données exemples InsectLabelR](https://github.com/Nmoiroux/InsectLabelR/blob/main/inst/extdata/). Ces exemples sont disponibles dans tous les formats de fichiers supportés.
 2. Si votre ensemble de données est un fichier `.ods` ou `.xlsx`, sélectionnez la feuille appropriée dans le menu déroulant. Vos données devraient alors s'afficher dans l'onglet 'Data table'. Si vous utilisez les données d'exemple suggérées ci-dessus, choisissez la feuille nommée 'Table_data'.
 
 ### 2. Configurer le tableau des paramètres d'impression
@@ -56,7 +56,7 @@ Une fois vos données et paramètres configurés :
 
 ### 5. Exemple de flux de travail
 
-1. Téléchargez depuis GitHub un [jeu de données exemples ETiquetteR](https://github.com/Nmoiroux/EtiquetteR/blob/main/inst/extdata/liste_ind_coll_ex.ods) au format `.ods` sur votre ordinateur.
+1. Téléchargez depuis GitHub un [jeu de données exemples InsectLabelR](https://github.com/Nmoiroux/InsectLabelR/blob/main/inst/extdata/liste_ind_coll_ex.ods) au format `.ods` sur votre ordinateur.
 2. Cliquez sur le bouton 'Browse' et chargez le jeu de données.
 3. Dans le menu déroulant 'Select data sheet', choisissez la feuille nommée 'Table_data'.
 4. Dans le menu déroulant 'Select printing parameters source', sélectionnez la feuille nommée 'Print_parameters_ex1'.

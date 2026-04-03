@@ -15,7 +15,7 @@ You will need a 'data table' that contains insect data to print (ideally one raw
 
 Supported file formats: `.csv` (tab-delimited), `.xlsx`, `.ods`
 
-1.  Click on the 'Browse' button and upload the file containing your insect data. For test purposes or to see examples of data, you can use example dataset from the ETiquetteR package (which also contains examples of printing parameter tables, see step 2 below) available here: [ETiquetteR example data](https://github.com/Nmoiroux/EtiquetteR/blob/main/inst/extdata/). These example data are available in all supported file formats.
+1.  Click on the 'Browse' button and upload the file containing your insect data. For test purposes or to see examples of data, you can use example dataset from the InsectLabelR package (which also contains examples of printing parameter tables, see step 2 below) available here: [InsectLabelR example data](https://github.com/Nmoiroux/InsectLabelR/blob/main/inst/extdata/). These example data are available in all supported file formats.
 2.  If your dataset is an `.ods` or `.xlsx` file, select the appropriate sheet from the drop-down menu. Your data should then be displayed in the 'Data table' tab. If using the example data suggested above, choose the sheet named 'Table_data'.
 
 ### 2. Configure the Printing Parameters Table
@@ -56,7 +56,7 @@ Once your data and parameters are configured:
 
 ### 5. Example Workflow
 
-1.  Download from github the [ETiquetteR example dataset](https://github.com/Nmoiroux/EtiquetteR/blob/main/inst/extdata/liste_ind_coll_ex.ods) file in the `.ods` format on your computer.
+1.  Download from github the [InsectLabelR example dataset](https://github.com/Nmoiroux/InsectLabelR/blob/main/inst/extdata/liste_ind_coll_ex.ods) file in the `.ods` format on your computer.
 2.  Click on the 'Browse' button and upload the dataset.
 3.  In the 'Select data sheet' drop-down menu, select the sheet named 'Table_data'
 4.  In the 'Select printing parameters source' drop-down menu, select the sheet named 'Print_parameters_ex1'
